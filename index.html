@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio de Arthur Barone - Jornalista e Especialista em Marketing">
   <title>Arthur Barone - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <section id="apresentacao">
-      <h1>OLÁ, EU SOU ARTHUR BARONE!</h1>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1 id="typewriter"></h1>
+      <nav class="menu">
+        <a href="#sobre">Sobre mim</a>
+        <a href="#design">Design</a>
+        <a href="#social">Social Media</a>
+        <a href="#audiovisual">Audio Visual</a>
+      </nav>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="section-content">
+      <h2>Sobre mim</h2>
       <p>
         Tenho 26 anos, sou Jornalista e Especialista em Marketing pela USP.
         Trabalho com estratégias e planejamento de marketing, social media e
@@ -19,16 +34,13 @@
         estratégias e planejamento. Tenho conhecimento em plataformas de edição
         de imagens e vídeos, e me interesso muito por design.
       </p>
-    </section>
-
-    <section id="servicos">
-      <h2>O QUE EU FAÇO?</h2>
+      <h3>O que eu faço?</h3>
       <p>
         Crio estratégias e planejo conteúdos com um tom de voz coerente com a
         marca, a fim de manter uma frequência na interação com seguidores e
         outras contas, criando pontos de contato e fortalecendo o branding.
       </p>
-      <ul>
+      <ul class="servicos">
         <li>Estratégia de conteúdo</li>
         <li>Análise de perfil + plano de ação</li>
         <li>Planejamento de conteúdo</li>
@@ -37,11 +49,41 @@
         <li>Copywriting para redes sociais</li>
         <li>Gestão de redes sociais</li>
       </ul>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <section id="design" class="section">
+    <div class="section-content">
+      <h2>Design</h2>
+      <p>
+        Criação de peças visuais, identidade visual e materiais gráficos
+        alinhados à estratégia de comunicação da marca.
+      </p>
+    </div>
+  </section>
+
+  <section id="social" class="section">
+    <div class="section-content">
+      <h2>Social Media</h2>
+      <p>
+        Gestão de redes sociais, planejamento de conteúdo, copywriting e
+        acompanhamento de métricas para engajar e fortalecer o branding.
+      </p>
+    </div>
+  </section>
+
+  <section id="audiovisual" class="section">
+    <div class="section-content">
+      <h2>Audio Visual</h2>
+      <p>
+        Produção e edição de vídeos, roteirização e conteúdo audiovisual
+        para plataformas digitais.
+      </p>
+    </div>
+  </section>
 
   <footer>
-    <p>&copy; 2026 - Arthur Barone</p>
+    <p>&copy; 2026 Arthur Barone</p>
   </footer>
 
   <script src="script.js"></script>
