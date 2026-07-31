@@ -30,13 +30,14 @@ body {
 }
 
 #typewriter {
-  font-size: clamp(2.8rem, 10vw, 7rem);
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
   font-weight: 400;
   letter-spacing: -0.03em;
   line-height: 1.1;
   min-height: 1.2em;
   margin-bottom: 3rem;
   color: #222;
+  text-align: center;
 }
 
 .line-regular {
