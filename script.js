@@ -1,14 +1,22 @@
 (function () {
   const line1 = "Olá, eu sou";
   const line2 = "Arthur Barone!";
+  const emojis = ["📱", "✍🏻", "🎯", "📊", "💡", "🔍"];
   const el = document.getElementById("typewriter");
-  let i = 0, j = 0;
+  let i = 0, j = 0, k = 0;
   let phase = 0;
+
+  function render(emoji) {
+    let html = '<span class="line-regular">' + line1.slice(0, i) + '</span>';
+    html += '<br><span class="line-bold">' + line2.slice(0, j) + '</span>';
+    html += '<br><span class="line-emoji">' + emoji + '</span><span class="cursor">|</span>';
+    el.innerHTML = html;
+  }
 
   function type() {
     if (phase === 0) {
       if (i < line1.length) {
-        el.innerHTML = '<span class="line-regular">' + line1.slice(0, i + 1) + '</span><br><span class="line-bold"></span><span class="cursor">|</span>';
+        render("");
         i++;
         setTimeout(type, 60);
       } else {
@@ -17,12 +25,21 @@
       }
     } else if (phase === 1) {
       if (j < line2.length) {
-        el.innerHTML = '<span class="line-regular">' + line1 + '</span><br><span class="line-bold">' + line2.slice(0, j + 1) + '</span><span class="cursor">|</span>';
+        render("");
         j++;
         setTimeout(type, 60);
       } else {
-        el.innerHTML = '<span class="line-regular">' + line1 + '</span><br><span class="line-bold">' + line2 + '</span><span class="cursor">|</span>';
+        phase = 2;
+        setTimeout(type, 500);
       }
+    } else if (phase === 2) {
+      render(emojis[k]);
+      k++;
+      if (k >= emojis.length) k = 0;
+      setTimeout(function () {
+        render("");
+        setTimeout(type, 400);
+      }, 1200);
     }
   }
 
