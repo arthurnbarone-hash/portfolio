@@ -187,6 +187,21 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+#sobre.section {
+  max-width: 1000px;
+}
+
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.sobre-grid .servicos {
+  grid-template-columns: 1fr;
+}
+
 #design,
 #audiovisual {
   background: #f9f9f9;
@@ -218,5 +233,12 @@ footer {
 
   .servicos {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .sobre-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
