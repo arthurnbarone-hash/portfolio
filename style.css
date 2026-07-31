@@ -118,7 +118,7 @@ body {
 
 .section {
   padding: 6rem 2rem;
-  max-width: 720px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -188,7 +188,7 @@ body {
 }
 
 #sobre.section {
-  max-width: 1000px;
+  max-width: 1200px;
 }
 
 .sobre-grid {
