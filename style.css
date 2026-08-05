@@ -191,17 +191,10 @@ body {
   max-width: 1200px;
 }
 
-.sobre-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 3rem;
-  align-items: start;
-}
-
 .sobre-bloco {
   display: flex;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .sobre-foto {
@@ -210,10 +203,6 @@ body {
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 12px;
-}
-
-.sobre-grid .servicos {
-  grid-template-columns: 1fr;
 }
 
 #design,
@@ -251,11 +240,6 @@ footer {
 }
 
 @media (max-width: 768px) {
-  .sobre-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
   .sobre-bloco {
     flex-direction: column;
     align-items: center;
