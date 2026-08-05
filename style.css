@@ -198,6 +198,20 @@ body {
   align-items: start;
 }
 
+.sobre-bloco {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.sobre-foto {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 12px;
+}
+
 .sobre-grid .servicos {
   grid-template-columns: 1fr;
 }
@@ -240,5 +254,16 @@ footer {
   .sobre-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
+  }
+
+  .sobre-bloco {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .sobre-texto h2::after {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
