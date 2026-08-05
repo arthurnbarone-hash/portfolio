@@ -26,7 +26,26 @@
   <section id="sobre" class="section">
     <div class="section-content">
       <div class="sobre-bloco">
-        <img src="IMG_2184.jpeg" alt="Foto de Arthur Barone" class="sobre-foto">
+        <div class="sobre-carousel" id="sobre-carousel">
+          <div class="carousel-track">
+            <img src="sobre-1.jpg" alt="Foto de Arthur Barone" class="carousel-img active">
+            <img src="sobre-2.jpg" alt="Foto de Arthur Barone" class="carousel-img">
+            <img src="sobre-3.jpg" alt="Foto de Arthur Barone" class="carousel-img">
+            <img src="sobre-4.jpg" alt="Foto de Arthur Barone" class="carousel-img">
+          </div>
+          <button type="button" class="carousel-btn prev" aria-label="Foto anterior">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19l-7-7 7-7"/><path d="M19 12H5"/></svg>
+          </button>
+          <button type="button" class="carousel-btn next" aria-label="Próxima foto">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <div class="carousel-dots" role="tablist" aria-label="Selecionar foto">
+            <button type="button" class="carousel-dot active" aria-label="Foto 1" data-index="0"></button>
+            <button type="button" class="carousel-dot" aria-label="Foto 2" data-index="1"></button>
+            <button type="button" class="carousel-dot" aria-label="Foto 3" data-index="2"></button>
+            <button type="button" class="carousel-dot" aria-label="Foto 4" data-index="3"></button>
+          </div>
+        </div>
         <div class="sobre-texto">
           <h2>Sobre mim</h2>
           <p>

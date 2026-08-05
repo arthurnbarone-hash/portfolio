@@ -75,4 +75,43 @@
       }
     });
   });
+
+  var carousel = document.getElementById("sobre-carousel");
+  if (carousel) {
+    var images = Array.prototype.slice.call(
+      carousel.querySelectorAll(".carousel-img")
+    );
+    var dots = Array.prototype.slice.call(
+      carousel.querySelectorAll(".carousel-dot")
+    );
+    var prev = carousel.querySelector(".carousel-btn.prev");
+    var next = carousel.querySelector(".carousel-btn.next");
+    var current = 0;
+
+    function goTo(index) {
+      current = (index + images.length) % images.length;
+      images.forEach(function (img, i) {
+        img.classList.toggle("active", i === current);
+      });
+      dots.forEach(function (dot, i) {
+        dot.classList.toggle("active", i === current);
+      });
+    }
+
+    prev.addEventListener("click", function () {
+      goTo(current - 1);
+    });
+    next.addEventListener("click", function () {
+      goTo(current + 1);
+    });
+    dots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        goTo(i);
+      });
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") goTo(current - 1);
+      if (e.key === "ArrowRight") goTo(current + 1);
+    });
+  }
 })();

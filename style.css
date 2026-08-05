@@ -193,16 +193,95 @@ body {
 
 .sobre-bloco {
   display: flex;
-  align-items: flex-start;
+  align-items: stretch;
   gap: 3rem;
 }
 
-.sobre-foto {
-  width: 220px;
-  height: 220px;
-  object-fit: cover;
+.sobre-carousel {
+  position: relative;
   flex-shrink: 0;
+  width: 320px;
   border-radius: 12px;
+  overflow: hidden;
+}
+
+.carousel-track {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.carousel-img.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18);
+  z-index: 2;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.carousel-btn:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #ff3131, #ff914d);
+}
+
+.carousel-btn.prev {
+  left: 12px;
+}
+
+.carousel-btn.next {
+  right: 12px;
+}
+
+.carousel-dots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: #ff3131;
+  background: linear-gradient(135deg, #ff3131, #ff914d);
 }
 
 #design,
@@ -244,6 +323,12 @@ footer {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .sobre-carousel {
+    width: 100%;
+    max-width: 360px;
+    height: 340px;
   }
 
   .sobre-texto h2::after {
